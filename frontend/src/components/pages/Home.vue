@@ -1,9 +1,10 @@
 <script>
+import SliderTabs from '../layout/SliderTabs.vue'
 import Wrapper from '../layout/Wrapper.vue'
-
 export default {
 	components: {
 		Wrapper,
+		SliderTabs,
 	},
 }
 </script>
@@ -11,6 +12,7 @@ export default {
 <template>
 	<Wrapper>
 		<h1>Homepage</h1>
+		<SliderTabs />
 	</Wrapper>
 </template>
 
