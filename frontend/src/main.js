@@ -9,9 +9,12 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 // vue route
-import router from './router'
 import App from './App.vue'
+const app = createApp(App)
 
-App.use(router)
+import router from './router'
 
-createApp(App).component('font-awesome-icon', FontAwesomeIcon).mount('#app')
+app.use(router)
+
+app.component('font-awesome-icon', FontAwesomeIcon)
+app.mount('#app')
