@@ -1,17 +1,17 @@
 <script>
-import Wrapper from '../layout/Wrapper.vue'
-
-export default {
-	components: {
-		Wrapper,
-	},
-}
+import { RouterLink } from 'vue-router'
 </script>
 
 <template>
-	<Wrapper>
-		<h1>Homepage</h1>
-	</Wrapper>
+	<nav>
+		<li>
+			<router-link to="/">Home</router-link>
+		</li>
+		<li>
+			<router-link to="/about">About</router-link>
+		</li>
+	</nav>
+	<h1>Header</h1>
 </template>
 
 <style lang="scss" scoped>

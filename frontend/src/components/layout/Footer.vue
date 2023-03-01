@@ -1,17 +1,7 @@
-<script>
-import Wrapper from '../layout/Wrapper.vue'
-
-export default {
-	components: {
-		Wrapper,
-	},
-}
-</script>
+<script></script>
 
 <template>
-	<Wrapper>
-		<h1>Homepage</h1>
-	</Wrapper>
+	<h1>Footer</h1>
 </template>
 
 <style lang="scss" scoped>

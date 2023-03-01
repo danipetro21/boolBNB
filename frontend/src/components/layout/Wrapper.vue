@@ -1,17 +1,19 @@
 <script>
-import Wrapper from '../layout/Wrapper.vue'
+import Footer from './Footer.vue'
+import Header from './Header.vue'
 
 export default {
 	components: {
-		Wrapper,
+		Header,
+		Footer,
 	},
 }
 </script>
 
 <template>
-	<Wrapper>
-		<h1>Homepage</h1>
-	</Wrapper>
+	<Header />
+	<slot></slot>
+	<Footer />
 </template>
 
 <style lang="scss" scoped>

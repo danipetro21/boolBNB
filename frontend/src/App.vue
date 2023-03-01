@@ -1,18 +1,17 @@
 <script>
-import { RouterView } from 'vue-router';
+import { RouterView } from 'vue-router'
 
-export default {
-
-}
+export default {}
 </script>
 
 <template>
-  <div>
-    <router-view />
-  </div>
+	<div>
+		<router-view />
+	</div>
 </template>
 
-<style lang="scss">
-@use './style/general.scss' as *;
-@use './style/partials/_variables' as *;
+<style lang="scss" scoped>
+@use './styles/general.scss' as *;
+@use './styles/partials/mixins' as *;
+@use './styles/partials/variables' as *;
 </style>

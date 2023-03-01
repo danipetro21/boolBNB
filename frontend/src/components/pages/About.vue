@@ -1,5 +1,5 @@
 <script>
-import Wrapper from '../Wrapper.vue'
+import Wrapper from '../layout/Wrapper.vue'
 
 export default {
 	components: {
@@ -10,9 +10,12 @@ export default {
 
 <template>
 	<Wrapper>
-		<h1>Testissimo!!!!</h1>
-		<h1>About!!!!</h1>
+		<h1>About Page</h1>
 	</Wrapper>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss" scoped>
+@use '../../styles/general.scss' as *;
+@use '../../styles/partials/mixins' as *;
+@use '../../styles/partials/variables' as *;
+</style>
