@@ -17,6 +17,7 @@ export default {
         
         <h1>HOME!!!!</h1>
         <h1>ciao mondo</h1>
+        <h1>Hola</h1>
         
     </Wrapper>    
     
