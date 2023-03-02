@@ -26,7 +26,7 @@ return new class extends Migration
             $table-> decimal('lon' , 11,8);
             $table-> string('img' , 64) -> nullable();
             $table-> boolean('visible');
-            $table-> decimal('price_per_night', 8,2);
+            $table-> decimal('price_per_night', 8,4);
             $table-> integer('bed_number');
             
             $table->timestamps();
