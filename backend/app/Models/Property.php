@@ -34,4 +34,12 @@ class Property extends Model
     public function sponsorship(){
         return $this -> belongsToMany(Sponsorship :: class);
     }
+
+    public function message(){
+        return $this -> hasMany(Property :: class);
+    }
+
+    public function view(){
+        return $this -> hasMany(View :: class);
+    }
 }
