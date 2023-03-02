@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('properties', function (Blueprint $table) {
             $table->id();
 
+            
             $table-> string('title', 128);
             $table-> text('description');
             $table-> integer('room_number');
