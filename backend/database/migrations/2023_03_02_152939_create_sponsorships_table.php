@@ -18,7 +18,7 @@ return new class extends Migration
 
             $table->decimal('cost', 5,2);
             $table->string('type');
-            $table->time('duration');
+            $table->string('duration');
 
             $table->timestamps();
         });

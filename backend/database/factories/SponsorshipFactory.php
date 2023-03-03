@@ -19,7 +19,7 @@ class SponsorshipFactory extends Factory
         return [
             'cost' => fake() -> randomNumber(3, true),
             'type' => fake() -> words(1, true),
-            'duration' => fake() -> numerify(['24', '72', '144']),
+            'duration' => fake() -> randomElement(['24', '72', '144']),
         ];
     }
 }

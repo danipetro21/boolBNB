@@ -15,6 +15,6 @@ class PropertySeeder extends Seeder
      */
     public function run()
     {
-        Property::factory() -> count(100) -> create();
+        Property::factory() -> count(5) -> create();
     }
 }

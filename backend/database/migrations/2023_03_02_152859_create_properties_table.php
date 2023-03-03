@@ -22,7 +22,7 @@ return new class extends Migration
             $table-> integer('room_number');
             $table-> integer('bath_number');
             $table-> integer('mq2');
-            $table-> string('address', 64);
+            $table-> string('address');
             $table-> decimal('lat' , 10,8);
             $table-> decimal('lon' , 11,8);
             $table-> string('img' , 64) -> nullable();
