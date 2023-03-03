@@ -28,18 +28,18 @@ class Property extends Model
     public function user(){
         return $this -> belongsTo(User :: class);
     }
-    public function service(){
+    public function services(){
         return $this -> belongsToMany(Service :: class);
     }
-    public function sponsorship(){
+    public function sponsorships(){
         return $this -> belongsToMany(Sponsorship :: class);
     }
 
-    public function message(){
+    public function messages(){
         return $this -> hasMany(Property :: class);
     }
 
-    public function view(){
+    public function views(){
         return $this -> hasMany(View :: class);
     }
 }

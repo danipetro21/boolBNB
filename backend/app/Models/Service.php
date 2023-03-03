@@ -13,7 +13,7 @@ class Service extends Model
         'name',
     ];
 
-    public function property(){
+    public function properties(){
         return $this -> belongsToMany(Property :: class);
     }
 }

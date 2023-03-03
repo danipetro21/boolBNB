@@ -22,7 +22,7 @@ class PropertyFactory extends Factory
             'room_number' => fake() -> numberBetween(1, 15),
             'bath_number' => fake() -> numberBetween(1,7),
             'mq2' => fake() -> numberBetween(50,500),
-            'address '=> fake() -> streetAddress(),
+            'address'=> fake() -> streetAddress(),
             'lat' => fake() -> latitude($min = -90, $max = 90),
             'lon' => fake() -> longitude($min = -180, $max = 180),
             'img' => fake() -> image(null, 360, 360, 'img', true),

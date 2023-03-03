@@ -16,7 +16,7 @@ class Sponsorship extends Model
     ];
 
 
-    public function property(){
+    public function properties(){
         return $this -> belongsToMany(Property :: class);
     }
 }
