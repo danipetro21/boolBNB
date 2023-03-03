@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use App\Models\Sponsorship;
 
 class SponsorshipSeeder extends Seeder
 {
@@ -14,6 +15,6 @@ class SponsorshipSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Sponsorship::factory() -> count(100) -> create();
     }
 }
