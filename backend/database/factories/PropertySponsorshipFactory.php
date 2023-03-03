@@ -5,9 +5,9 @@ namespace Database\Factories;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\View>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
  */
-class ViewFactory extends Factory
+class PropertySponsorshipFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -17,8 +17,7 @@ class ViewFactory extends Factory
     public function definition()
     {
         return [
-            'ip' => fake() -> ipv4(),
-            'visit_date' => fake() -> date('Y_m_d'),
+            'exp_date' => fake() -> date('Y_m_d'),
         ];
     }
 }
