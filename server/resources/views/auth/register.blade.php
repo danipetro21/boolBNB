@@ -25,6 +25,39 @@
                             </div>
                         </div>
 
+                        {{-- add surname field --}}
+
+                        <div class="mb-4 row">
+                            <label for="surname" class="col-md-4 col-form-label text-md-right">{{ __('Surname') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="surname" type="text" class="form-control @error('name') is-invalid @enderror" name="surname" value="{{ old('surname') }}" required autocomplete="surname" autofocus>
+
+                                @error('surname')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $surname }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        {{-- add birthday field --}}
+
+                        <div class="mb-4 row">
+                            <label for="birth_day" class="col-md-4 col-form-label text-md-right">{{ __('Birth Day') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="birth_day" type="date" class="form-control @error('birth_day') is-invalid @enderror" name="birth_day" value="{{ old('birth_day') }}" required autocomplete="birth_day" autofocus>
+
+                                @error('birth_day')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $birth_day }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+                        </div>
+
+
                         <div class="mb-4 row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
