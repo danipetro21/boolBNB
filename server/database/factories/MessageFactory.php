@@ -17,7 +17,8 @@ class MessageFactory extends Factory
     public function definition()
     {
         return [
-            'email' => fake() -> email() 
+            'email' => fake() -> email(),
+            'message' => fake() -> paragraph()
         ];
     }
 }

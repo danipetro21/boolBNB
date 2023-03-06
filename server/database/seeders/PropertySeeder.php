@@ -19,7 +19,7 @@ class PropertySeeder extends Seeder
      */
     public function run()
     {
-        Property::factory() -> count(5) -> make() -> each(function($property) {
+        Property::factory() -> count(100) -> make() -> each(function($property) {
 
             // Associa ogni proprietà con uno user random
             $user = User :: inRandomOrder() -> first();
