@@ -27,13 +27,14 @@ class PropertySeeder extends Seeder
 
             $property -> save();
 
-            // Associa ogni propietà con una sponsorship e da una exp_date
-            $sponsorships = Sponsorship::all();
+            // Associa ogni propietà con una sponsorship e da una exp_date alla sponsorship associata
+            $sponsorship = Sponsorship:: inRandomOrder() -> first();
             $property->sponsorships() -> sync([
-                $sponsorships->random() -> id => [
+                $sponsorship -> id => [
                 'exp_date' => now() -> addDays(rand(1, 6)) -> format('Y-m-d')
                 ]
             ]);
+
 
             // Associa ad ogni proprietà una quantità (1-20) di servizi
             $services = Service :: inRandomOrder() -> limit(rand(1, 20)) -> get();
