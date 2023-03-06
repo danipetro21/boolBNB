@@ -19,14 +19,14 @@ class PropertySponsorshipSeeder extends Seeder
         $properties = Property::all();
         $sponsorships = Sponsorship::all();
 
-        $exp_date = now()->addMonths(6); // Set the expiry date to 6 months from now
+        // $exp_date = now()->addDays(rand(1,6)); // Set the expiry date to 6 months from now
 
         foreach ($properties as $property) {
             // Associate each property with a random sponsorship
-            $property->sponsorships()->attach(
-                $sponsorships->random()->id,
-                ['exp_date' => $exp_date]
-            );
+            $property->sponsorships()->sync([
+                $sponsorships->random()->id => 
+                ['exp_date' => now()->addDays(rand(1,6))]
+            ]);
         }
     }
 }

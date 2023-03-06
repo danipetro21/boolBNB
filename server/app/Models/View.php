@@ -14,7 +14,7 @@ class View extends Model
         'visit_date',
     ];
 
-    public function properties(){
+    public function property(){
         return $this -> belongsTo(Property :: class);
     }
 }

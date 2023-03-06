@@ -17,7 +17,7 @@ class SponsorshipFactory extends Factory
     public function definition()
     {
         return [
-            'cost' => fake() -> randomNumber(3, true),
+            'cost' => fake() -> randomElement(['2.99' , '5.99' , '9.99']),
             'type' => fake() -> words(1, true),
             'duration' => fake() -> randomElement(['24', '72', '144']),
         ];

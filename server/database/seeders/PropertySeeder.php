@@ -31,8 +31,8 @@ class PropertySeeder extends Seeder
             $services = Service :: inRandomOrder() -> limit(rand(1, 20)) -> get();
             $property -> services() -> sync($services);
 
-            // $sponsorships = Sponsorship :: inRandomOrder() -> first();
-            // $property -> sponsorships() -> sync($sponsorships);
+            $sponsorships = Sponsorship :: inRandomOrder() -> first();
+            $property -> sponsorships() -> sync($sponsorships);
 
         });
     }
