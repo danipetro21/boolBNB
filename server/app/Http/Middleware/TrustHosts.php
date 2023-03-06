@@ -15,6 +15,8 @@ class TrustHosts extends Middleware
     {
         return [
             $this->allSubdomainsOfApplicationUrl(),
+            'localhost:8000',
+            'localhost:3000',
         ];
     }
 }
