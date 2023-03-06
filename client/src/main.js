@@ -1,4 +1,5 @@
 import { createApp } from 'vue'
+import { createPinia } from 'pinia'
 // remix icons
 import 'remixicon/fonts/remixicon.css'
 
@@ -11,5 +12,9 @@ import App from './App.vue'
 import router from './router'
 const app = createApp(App)
 
+// pinia
+const pinia = createPinia()
+
+app.use(pinia)
 app.use(router)
 app.mount('#app')
