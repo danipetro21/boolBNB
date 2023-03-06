@@ -16,7 +16,7 @@ class MessageSeeder extends Seeder
      */
     public function run()
     {
-        Message::factory() -> count(100) -> make() -> each(function($message) {
+        Message::factory() -> count(20) -> make() -> each(function($message) {
 
             // Associa ogni messaggio con una proprietà random
             $property = Property :: inRandomOrder() -> first();

@@ -19,7 +19,6 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             SponsorshipSeeder::class,
             PropertySeeder::class,
-            PropertySponsorshipSeeder::class,
             MessageSeeder::class,
             ViewSeeder::class,
         ]);

@@ -15,7 +15,7 @@ return new class extends Migration {
     Schema::create('property_sponsorship', function (Blueprint $table) {
       $table->id();
 
-            $table->date('exp_date') -> nullable() -> default(null);
+            $table->date('exp_date');
 
       $table->timestamps();
     });

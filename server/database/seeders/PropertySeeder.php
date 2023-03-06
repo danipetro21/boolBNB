@@ -19,7 +19,7 @@ class PropertySeeder extends Seeder
      */
     public function run()
     {
-        Property::factory() -> count(100) -> make() -> each(function($property) {
+        Property::factory() -> count(20) -> make() -> each(function($property) {
 
             // Associa ogni proprietà con uno user random
             $user = User :: inRandomOrder() -> first();
@@ -27,12 +27,17 @@ class PropertySeeder extends Seeder
 
             $property -> save();
 
-            // NaM
+            // Associa ogni propietà con una sponsorship e da una exp_date
+            $sponsorships = Sponsorship::all();
+            $property->sponsorships() -> sync([
+                $sponsorships->random() -> id => [
+                'exp_date' => now() -> addDays(rand(1, 6)) -> format('Y-m-d')
+                ]
+            ]);
+
+            // Associa ad ogni proprietà una quantità (1-20) di servizi
             $services = Service :: inRandomOrder() -> limit(rand(1, 20)) -> get();
             $property -> services() -> sync($services);
-
-            $sponsorships = Sponsorship :: inRandomOrder() -> first();
-            $property -> sponsorships() -> sync($sponsorships);
 
         });
     }
